@@ -48,6 +48,31 @@ The biggest reason to use data pipelines is that IT teams need to be log users r
 	* [Launch YC: Tarsal: Data pipeline built for modern security teams | Y Combinator](https://www.ycombinator.com/launches/IU6-tarsal-data-pipeline-built-for-modern-security-teams) 
 		* [Tarsal - #1 Security Data Platform](https://www.tarsal.co/) 
 	* [Telemetry Data Pipeline & Log Analysis Solutions | Mezmo](https://www.mezmo.com/)
+# Architecture Examples 
+## SIEM Focus
+### Open Source
+For at-home implementations 
+- Graylog
+- Wazuh
+### Proprietary
+- Hive Project - not too many features for a large company
+- [Matano | Cloud native SIEM](https://matanosecurity.com/) - security data lake
+	- Bring your own buckets (S3)
+- Devo
+- Splunk - go with SVC to save money for businesses
+## Not Marketed to Security
+### Open Source
+Advanced implementation for at-home.
+- Files to Minio to Trino and Iceberg to Hive Metastore to Maria DB
+	- [High-performance open-source Data Lakehouse at home | by Daniel Palma | Medium](https://medium.com/@danthelion/high-performance-open-source-data-lakehouse-at-home-56c8d7fa87b5) 
+### Proprietary Analytics Platforms, Lakehouses, etc
+- Loki, Grafana
+	- good for analytics 
+	- does not offer transformation and pipelines.  Would need an ETL proxy in front of it
+- Databricks - lakehouse
+	- Really powerful and flexible 
+	- Not sure about price and stuff
+- Dremio - lakehouse
 # Curated Solutions
 ## Research & Consulting
 - SIEM Matrices
@@ -287,6 +312,13 @@ The biggest reason to use data pipelines is that IT teams need to be log users r
 - [Airbyte | Open-Source Data Integration Platform | ELT tool](https://airbyte.com/) - Free by self-hosting with Docker. Cheap cloud options.
 - [Jitsu : Open Source Data Integration Platform](https://jitsu.com/) - Open-source alternative to Segment. Free by self-hosting with Dock. 
 - [dbt Labs | Transform Data in Your Warehouse](https://www.getdbt.com/) - Uses SQL (con), Open Source, Jinja templates with SQL (ehhh sorta unrelated to most pipeline tools)
+- [Meltano: Unlock all the data that powers your product features](https://meltano.com/) 
+- [Apache Flink® — Stateful Computations over Data Streams | Apache Flink](https://flink.apache.org/) 
+- [Vector | A lightweight, ultra-fast tool for building observability pipelines](https://vector.dev/) 
+- [fluentbit](https://fluentbit.io/) 
+- [Prophecy | Low-code data transformation](https://www.prophecy.io/) 
+- [Cloud ETL Tool for No Code Data Pipelines | Portable](https://portable.io/) 
+- 
 
 - Cribl Stream & Alternatives
 	- This is my favorite tool to integrate with SIEMs. However, I've had trouble finding similar tools.  I wonder what their competitors are

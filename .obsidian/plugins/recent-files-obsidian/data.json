@@ -5,6 +5,10 @@
       "path": "README.md"
     },
     {
+      "basename": "1. Tech Stack & Architecture Design",
+      "path": "SIEM Framework/Project Workspace/1. Tech Stack & Architecture Design.md"
+    },
+    {
       "basename": "SIEM_framework_2023",
       "path": "SIEM Framework/SIEM_framework_2023.png"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "SIEM_framework_2023",
       "path": "SIEM Framework/SIEM_framework_2023.md"
-    },
-    {
-      "basename": "1. Tech Stack & Architecture Design",
-      "path": "SIEM Framework/Project Workspace/1. Tech Stack & Architecture Design.md"
     },
     {
       "basename": "2. Hardware & Infrastructure Initialization",
