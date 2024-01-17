@@ -19,7 +19,6 @@ These are some things to consider when looking at SIEMs and security data analyt
 	- Sigma rules?
 - Control over what gets warehoused or used with computation or infrastructure?
 	- This is why data pipelines like Cribl should be used so that their is control
-- Infrastructure model and approach?
 - Detection Engineering
 	- Machine Learning and AI 
 		- Anomaly Detection Models
@@ -29,7 +28,7 @@ These are some things to consider when looking at SIEMs and security data analyt
 # Use a Data Pipeline to Save Resources/Money!!
 Send all of your log data from your IT systems to a data pipelining system like any of the ones mentioned below.
 
-The biggest reason to use data pipelines is that IT teams need to be log users rather than just log keepers. It allows them to align infrastructure costs with usage. Namely, they aren't spending an exorbitant amount of money warehousing data that never needed warehousing.  Sidenote: warehousing or indexing the data to make it easier to query and analyze costs A LOT. Without a central data transformation proxy like a data pipeline tool, teams will likely be playing into the hands of analytics/SIEM platforms pricing that benefits from people who don't use all of their data similar to how Costco banks on consumers that don't make good use of their memberships.
+The biggest reason to use data pipelines is that IT teams need to be log users rather than just log keepers. It allows them to align infrastructure costs with usage. Namely, they aren't spending an exorbitant amount of money warehousing data that never needed warehousing (Sidenote: warehousing or indexing the data to make it easier to query and analyze costs A LOT). Without a central data transformation proxy like a data pipeline tool, teams will likely be playing into the hands of analytics/SIEM platforms pricing that benefits from people who don't use all of their data similar to how Costco banks on consumers that don't make good use of their memberships.
 
 - Cribl Stream & Alternatives
 	- This is my favorite tool to integrate with SIEMs. However, I've had trouble finding similar tools.  I wonder what their competitors are
@@ -53,24 +52,7 @@ The biggest reason to use data pipelines is that IT teams need to be log users r
 ## Research & Consulting
 - SIEM Matrices
 	- ![](../../__attachments/SIEM%20Framework/Solution%20&%20Architecture%20Curation/IMG-20231108213438736.png)
-## Related Awesome List Curations
-- [Awesome-SOAR](https://github.com/correlatedsecurity/Awesome-SOAR) 
-- https://github.com/meirwah/awesome-incident-response#playbooks 
-- https://github.com/Correia-jpv/fucking-awesome-incident-response#playbooks 
-- https://github.com/cyb3rxp/awesome-soc/blob/main/README.md 
-- https://github.com/cyb3rxp/awesome-soc/blob/main/threat_intelligence.md 
-- https://github.com/academic/awesome-datascience#miscellaneous-tools 
-- https://github.com/academic/awesome-datascience#visualization-tools 
-- https://github.com/igorbarinov/awesome-data-engineering#databases 
-- https://github.com/igorbarinov/awesome-data-engineering#data-ingestion 
-- https://github.com/igorbarinov/awesome-data-engineering#workflow 
-- https://github.com/igorbarinov/awesome-data-engineering#data-lake-management 
-- https://github.com/igorbarinov/awesome-data-engineering#elk-elastic-logstash-kibana 
-- https://github.com/newTendermint/awesome-bigdata#data-ingestion 
-- https://github.com/newTendermint/awesome-bigdata#data-visualization 
-- https://github.com/0x4D31/awesome-threat-detection#detection-alerting-and-automation-platforms
-- https://github.com/LetsDefend/awesome-soc-analyst#network-devices-logs 
-- https://github.com/pawl/awesome-etl 
+
 ## Acronyms
 - SIEM - aggregating data and doing analysis
 - SOAR - logic to react to analysis (integrates with SIEM)
@@ -408,4 +390,22 @@ The biggest reason to use data pipelines is that IT teams need to be log users r
 		- ![](../../__attachments/SIEM%20Framework/Solution%20&%20Architecture%20Curation/IMG-20231210124729057.png)
 - Personalization Engines?
 	- ![](../../__attachments/SIEM%20Framework/Solution%20&%20Architecture%20Curation/IMG-20231210124656674.png)
-- 
+
+## Related Awesome List Curations
+- [Awesome-SOAR](https://github.com/correlatedsecurity/Awesome-SOAR) 
+- https://github.com/meirwah/awesome-incident-response#playbooks 
+- https://github.com/Correia-jpv/fucking-awesome-incident-response#playbooks 
+- https://github.com/cyb3rxp/awesome-soc/blob/main/README.md 
+- https://github.com/cyb3rxp/awesome-soc/blob/main/threat_intelligence.md 
+- https://github.com/academic/awesome-datascience#miscellaneous-tools 
+- https://github.com/academic/awesome-datascience#visualization-tools 
+- https://github.com/igorbarinov/awesome-data-engineering#databases 
+- https://github.com/igorbarinov/awesome-data-engineering#data-ingestion 
+- https://github.com/igorbarinov/awesome-data-engineering#workflow 
+- https://github.com/igorbarinov/awesome-data-engineering#data-lake-management 
+- https://github.com/igorbarinov/awesome-data-engineering#elk-elastic-logstash-kibana 
+- https://github.com/newTendermint/awesome-bigdata#data-ingestion 
+- https://github.com/newTendermint/awesome-bigdata#data-visualization 
+- https://github.com/0x4D31/awesome-threat-detection#detection-alerting-and-automation-platforms
+- https://github.com/LetsDefend/awesome-soc-analyst#network-devices-logs 
+- https://github.com/pawl/awesome-etl 
