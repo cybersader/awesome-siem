@@ -1,0 +1,34 @@
+.workspace-leaf-content.folder-focus-mode .hidden-tree-element {
+	height: 0px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.workspace-leaf-content.folder-focus-mode.folder-focus-mode-simplified .folderfocus-parent:not(.is-collapsed)>.nav-folder-title {
+	height: 0px;
+	opacity: 0;
+	pointer-events: none;
+	margin:0;
+	padding: 0;
+}
+
+.workspace-leaf-content.folder-focus-mode.folder-focus-mode-simplified div.nav-folder.mod-root .nav-folder.folderfocus-parent:not(.is-collapsed)>.nav-folder-children {    
+	padding-left: 0;
+    margin: 0;
+    border: none;
+}
+
+.folder-focus-mode.folder-focus-mode-simplified  .folderfocus-up-element-link {
+	opacity: .6;
+	font-size: 70%;
+}
+
+.folder-focus-mode.folder-focus-mode-simplified  .folderfocus-up-element-link .nav-folder-title-content::before {
+	content: '<';
+	margin-right: 5px;
+}
+
+.folder-focus-mode.folder-focus-mode-simplified  .folderfocus-up-element-link .nav-folder-collapse-indicator {
+	pointer-events: none;
+	display: none;
+}
