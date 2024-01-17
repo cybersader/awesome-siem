@@ -30,6 +30,8 @@ Send all of your log data from your IT systems to a data pipelining system like 
 
 The biggest reason to use data pipelines is that IT teams need to be log users rather than just log keepers. It allows them to align infrastructure costs with usage. Namely, they aren't spending an exorbitant amount of money warehousing data that never needed warehousing (Sidenote: warehousing or indexing the data to make it easier to query and analyze costs A LOT). Without a central data transformation proxy like a data pipeline tool, teams will likely be playing into the hands of analytics/SIEM platforms pricing that benefits from people who don't use all of their data similar to how Costco banks on consumers that don't make good use of their memberships.
 
+-  [Why you need Data Engineering Pipelines before an enterprise SIEM | by Alex Teixeira | Oct, 2023 | Detect FYI](https://detect.fyi/why-you-need-data-engineering-pipelines-before-an-enterprise-siem-0be553584aa9)
+
 - Cribl Stream & Alternatives
 	- This is my favorite tool to integrate with SIEMs. However, I've had trouble finding similar tools.  I wonder what their competitors are
 	- [Cribl Stream - Simplify Data Stream, Routing & Collection](https://cribl.io/stream/)
@@ -38,17 +40,15 @@ The biggest reason to use data pipelines is that IT teams need to be log users r
 	- [ETL Service - Serverless Data Integration - AWS Glue - AWS](https://aws.amazon.com/glue/) 
 	- Azure Stream Analytics
 - Security Data Pipelines
-	- [Tenzir's security data pipeline platform optimizes SIEM, cloud, and data costs - Help Net Security](https://www.helpnetsecurity.com/2023/08/09/tenzir-security-data-pipeline-platform/)
-		- collection, shaping, enrichment, and routing of data between any security and data technology using a rich set of data types and security-native operators purpose-built for security use cases
-		* [Tenzir | Open Source Data Pipelines for Security Teams](https://tenzir.com/) 
-	* [Why you need Data Engineering Pipelines before an enterprise SIEM | by Alex Teixeira | Oct, 2023 | Detect FYI](https://detect.fyi/why-you-need-data-engineering-pipelines-before-an-enterprise-siem-0be553584aa9)
-		* Content engineering and detection engineering
-		* Benefits: log viz, data quality, data collab, routing.
-	* [What a Robust Security Data Pipeline is Critical in 2023](https://cribl.io/blog/why-a-robust-observability-pipeline-is-critical-for-security-professionals/) 
-	* [Launch YC: Tarsal: Data pipeline built for modern security teams | Y Combinator](https://www.ycombinator.com/launches/IU6-tarsal-data-pipeline-built-for-modern-security-teams) 
-		* [Tarsal - #1 Security Data Platform](https://www.tarsal.co/) 
-	* [Telemetry Data Pipeline & Log Analysis Solutions | Mezmo](https://www.mezmo.com/)
-# Architecture Examples 
+	-  [Tenzir | Open Source Data Pipelines for Security Teams](https://tenzir.com/) 
+	-  [Tarsal - #1 Security Data Platform](https://www.tarsal.co/) 
+	* [Mezmo | Telemetry Data Pipeline & Log Analysis Solutions](https://www.mezmo.com/)
+# Architecture Examples - WIP
+## Data Formats 
+- Normalize all of your data to use...
+	- CSV or DELIMITED format for "flat" data, 
+	- JSON for "nested" data, 
+	- and Parquet where optimization is valuable AND where not all of the columns are always being used
 ## SIEM Focus
 ### Open Source
 For at-home implementations 
@@ -56,10 +56,41 @@ For at-home implementations
 - Wazuh
 ### Proprietary
 - Hive Project - not too many features for a large company
-- [Matano | Cloud native SIEM](https://matanosecurity.com/) - security data lake
+- [Matano | Cloud native SIEM](https://matanosecurity.com/) 
+	- security data lake
 	- Bring your own buckets (S3)
+- [Panther | A Cloud SIEM Platform for Modern Security Teams](https://panther.com/) 
+	- also security data lake but it's limited to Snowflake 
+- [Hunters SOC Platform: SIEM Alternative | Automate Detection & Response](https://www.hunters.security/) 
+	- Integrates with Databricks lakehouse
+
 - Devo
 - Splunk - go with SVC to save money for businesses
+
+- Security Data Pipelines
+	-  [Tenzir | Open Source Data Pipelines for Security Teams](https://tenzir.com/) 
+	-  [Tarsal - #1 Security Data Platform](https://www.tarsal.co/) 
+	* [Mezmo | Telemetry Data Pipeline & Log Analysis Solutions](https://www.mezmo.com/)
+
+- Misc threat intelligence stuff
+	- [Team Cymru: Digital Risk Management - Digital Threat Assessment and Tools](https://www.team-cymru.com/)
+
+- SOAR - security orchestration automation response 
+	- [Tines | Smart, secure workflows](https://www.tines.com/) 
+	- [Shuffle Automation - An Open Source SOAR solution](https://shuffler.io/)
+	
+	
+	- [SIRP SOAR Platform: Security Automation at Lightning Speed](https://www.sirp.io/) 
+	- [Chronicle | Suite | SOAR](https://chronicle.security/suite/soar/) 
+	- [Devo SOAR -](https://www.devo.com/resources/solution-brief/devo-soar/) 
+	- [Fortinet - Fortisoar (SOAR) Software)](https://www.fortinet.com/products/fortisoar) 
+	- [IBM Security QRadar SOAR](https://www.ibm.com/products/qradar-soar)
+	- [ServiceNow SOAR](https://www.servicenow.com/products/security-operations/what-is-soar.html) 
+	- [Swimlane - AI Enabled Security Automation, SOC Automation, SOAR](https://swimlane.com/) 
+	- [Streamlined and Converged Cyber Security - Logpoint](https://www.logpoint.com/en/) 
+	- 
+	- For specific systems:
+		- [Intelligent Threat Detection - Amazon GuardDuty - AWS](https://aws.amazon.com/guardduty/) 
 ## Not Marketed to Security
 ### Open Source
 Advanced implementation for at-home.
@@ -69,10 +100,22 @@ Advanced implementation for at-home.
 - Loki, Grafana
 	- good for analytics 
 	- does not offer transformation and pipelines.  Would need an ETL proxy in front of it
+	- [Grafana Loki OSS | Log aggregation system](https://grafana.com/oss/loki/)
+		- [grafana/loki: Like Prometheus, but for logs.](https://github.com/grafana/loki)
+		- [Grafana Loki | DigitalOcean Marketplace 1-Click App](https://marketplace.digitalocean.com/apps/grafana-loki) 
 - Databricks - lakehouse
+	- [Data Lakehouse Architecture and AI Company | Databricks](https://www.databricks.com/)
+		- Platform for working with Apache Spark.
+		- Automated infra management
+		- Microsoft Azure Databricks (integrated into Azure)
 	- Really powerful and flexible 
 	- Not sure about price and stuff
-- Dremio - lakehouse
+- Dremio 
+	- [Dremio | The Easy and Open Data Lakehouse Platform](https://www.dremio.com/) 
+- Starburst - a data lake that could apply to security too 
+	- [Starburst | AI Data Analytics | Data Mesh](https://www.starburst.io/) 
+	- [Rethinking SIEM Solutions](https://www.starburst.io/blog/rethinking-siem-solutions/) 
+- 
 # Curated Solutions
 ## Research & Consulting
 - SIEM Matrices
@@ -294,15 +337,18 @@ Advanced implementation for at-home.
 - [nsacyber/WALKOFF: A flexible, easy to use, automation framework allowing users to integrate their capabilities and devices to cut through the repetitive, tedious tasks slowing them down. #nsacyber](https://github.com/nsacyber/WALKOFF)
 -  EveBox-  Interface for the Suricata intrusion detection system (IDS). It provides alert management and visualization features for Suricata-generated alerts. : https://evebox.org/
 ### Cloud - Proprietary
+If this then this, security integrations, automations
 - [Tines | Smart, secure workflows](https://www.tines.com/) 
 - [Shuffle Automation - An Open Source SOAR solution](https://shuffler.io/)
+
+
 - [SIRP SOAR Platform: Security Automation at Lightning Speed](https://www.sirp.io/) 
 - [Chronicle | Suite | SOAR](https://chronicle.security/suite/soar/) 
 - [Devo SOAR -](https://www.devo.com/resources/solution-brief/devo-soar/) 
 - [Fortinet - Fortisoar (SOAR) Software)](https://www.fortinet.com/products/fortisoar) 
 - [IBM Security QRadar SOAR](https://www.ibm.com/products/qradar-soar)
-- [Security Orchestration, Automation, and Response) - Service Now](https://www.servicenow.com/products/security-operations/what-is-soar.html) 
-- [AI Enabled Security Automation, SOC Automation, SOAR](https://swimlane.com/) 
+- [ServiceNow SOAR](https://www.servicenow.com/products/security-operations/what-is-soar.html) 
+- [Swimlane - AI Enabled Security Automation, SOC Automation, SOAR](https://swimlane.com/) 
 - [Streamlined and Converged Cyber Security - Logpoint](https://www.logpoint.com/en/) 
 - 
 - For specific systems:
