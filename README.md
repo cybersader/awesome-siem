@@ -4,7 +4,7 @@ Diagram from my Security Operations Data Engineering Framework (SODEF) paper.  T
 
 SIEM Research - [A_Cost_Effective_SIEM_Framework___BenR___2024_IUPUI_MSCTS](../A_Cost_Effective_SIEM_Framework___BenR___2024_IUPUI_MSCTS.pdf)
 
-![IMG-20240117113534137](../../__attachments/SIEM%20Framework/Solution%20&%20Architecture%20Curation/IMG-20240117113534137.png)
+![IMG-20240117125647565](__attachments/IMG-20240117125647565.png)
 # SIEM Components, Features, Constraints
 These are some things to consider when looking at SIEMs and security data analytics architectures.
 
@@ -29,7 +29,7 @@ These are some things to consider when looking at SIEMs and security data analyt
 # Use a Data Pipeline to Save Resources/Money!!
 Send all of your log data from your IT systems to a data pipelining system like any of the ones mentioned below.
 
-The biggest reason to use data pipelines is that IT teams need to be log users rather than just log keepers. It allows them to align infrastructure costs with our usage. Namely, they aren't spending an exorbitant amount of money warehousing data that never needed warehousing.  Sidenote: warehousing or indexing the data to make it easier to query and analyze costs A LOT. Without a central data transformation proxy like a data pipeline tool, teams will likely be playing into the hands of analytics/SIEM platforms pricing that benefits from people who don't use all of their data similar to how Costco banks on consumers that don't make good use of their memberships.
+The biggest reason to use data pipelines is that IT teams need to be log users rather than just log keepers. It allows them to align infrastructure costs with usage. Namely, they aren't spending an exorbitant amount of money warehousing data that never needed warehousing.  Sidenote: warehousing or indexing the data to make it easier to query and analyze costs A LOT. Without a central data transformation proxy like a data pipeline tool, teams will likely be playing into the hands of analytics/SIEM platforms pricing that benefits from people who don't use all of their data similar to how Costco banks on consumers that don't make good use of their memberships.
 
 - Cribl Stream & Alternatives
 	- This is my favorite tool to integrate with SIEMs. However, I've had trouble finding similar tools.  I wonder what their competitors are
@@ -346,7 +346,7 @@ The biggest reason to use data pipelines is that IT teams need to be log users r
 	- ![](https://mattturck.com/wp-content/uploads/2021/12/Data-and-AI-Landscape-2021-v3-small-1200x621.jpg)
 - [The 2023 MAD (Machine Learning, Artificial Intelligence & Data) Landscape – Matt Turck](https://mattturck.com/mad2023/)
 	- [MAD 2023 - Version 1.0](https://mattturck.com/landscape/mad2023.pdf) - pdf
-	- ![[IMG-20240117123027940.png]]
+	- ![IMG-20240117123027940](__attachments/IMG-20240117123027940.png)
 ### Data Pipeline Architecture
 - [Data Pipeline Architecture Explained: 6 Diagrams And Best Practices](https://www.montecarlodata.com/blog-data-pipeline-architecture-explained/) 
 - 
