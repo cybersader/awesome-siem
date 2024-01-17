@@ -3,6 +3,7 @@ SIEM, Visibility, and Event-Driven Architecture Curated Solutions.
 Diagram from my Security Operations Data Engineering Framework (SODEF) paper.  These are the pieces you can look at when trying to build a cost-effective data engineering architecture and system for analytics and threat detection in your organization.
 
 SIEM Research - [A_Cost_Effective_SIEM_Framework___BenR___2024_IUPUI_MSCTS](https://github.com/cybersader/awesome-siem/blob/main/SIEM%20Framework/A_Cost_Effective_SIEM_Framework___BenR___2024_IUPUI_MSCTS.pdf)
+Grad School Projects and Content - https://github.com/cybersader/grad-school-projects
 
 ![IMG-20240117125647565](__attachments/IMG-20240117125647565.png)
 # SIEM Components, Features, Constraints
